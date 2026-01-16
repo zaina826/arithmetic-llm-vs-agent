@@ -1,15 +1,6 @@
-"""
-Run a *single* base model (no agents) on GSM8K-style questions and write JSONL outputs.
 
-Key fixes:
-- Robustly extract the model text from whatever aixplain returns (dict / object / string).
-- Always store a clean one-line integer answer in `model_answer` (trim + regex extract).
-- Keep the prompt exactly as you provided (normalized for everyone).
-- Preserve fairness: same prompt prefix, one call per question, deterministic-ish settings if supported.
-"""
 
-import json
-import re
+import jsimport re
 from pathlib import Path
 from typing import Any, Optional
 
